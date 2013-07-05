@@ -1,0 +1,11 @@
+<div class="login">
+  <% if @errors %>
+    <p> <%= @errors %> </p>
+  <% end %>
+  <form method="post" action="/login">
+    <input type="text" name="name" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="log in">
+  </form>
+  <p>new user? signup <a href="/signup">here</a></p>
+</div>

@@ -1,0 +1,7 @@
+<% if @album && @photos %>
+  <ul>
+    <% @photos.each do |photo| %>
+      <li><a href="/photos/<%= photo.id %>"><img src="<%= photo.filename %>"></a></li>
+    <% end %>
+  </ul>
+<% end %>

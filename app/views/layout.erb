@@ -15,9 +15,17 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Flickar</title>
 </head>
 <body>
+  <header>
+    <h1><a href="/">Flickar</a></h1>
+    <% if session[:user_id] == nil %>
+      <%= erb :login %>
+    <% else %>
+      <%= erb :logged_in %>
+    <% end %>
+  </header>
   <%= yield %>
 </body>
 </html>

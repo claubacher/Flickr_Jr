@@ -1,0 +1,4 @@
+<% if @user && @albums %>
+  <h3><%= @user.name %>'s Albums</h3>
+  <%= erb :_albums_list %>
+<% end %>
