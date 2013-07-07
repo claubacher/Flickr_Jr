@@ -1,4 +1,4 @@
-<ul>
+<ul class="albums-list">
   <% @albums.each do |album| %>
   <li><a href="/users/<%= album.user.id %>/albums/<%= album.id %>"><%= album.name %></a></li>
   <% end %>

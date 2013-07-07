@@ -2,11 +2,12 @@ post '/login' do
   if User.authenticate(params[:name], params[:password])
     @user = User.authenticate(params[:name], params[:password])
     session[:user_id] = @user.id
-    redirect '/'
   else
     @errors = "Username or password was invalid."
-    erb :index
   end
+  @photos = Photo.order("created_at DESC").limit(10)
+  @users = User.all
+  erb :index
 end
 
 get '/logout' do

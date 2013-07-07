@@ -2,8 +2,107 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
-th {
-  text-align: left;
+
+/*_____LAYOUT______*/
+header{
+	position:fixed ;
+	top: 24px;
+	left: 0;
+}
+header h1{
+	margin: 0;
+	padding: 4px 20px;
+}
+header h1 a{
+	color: #19D9FF;
+	text-decoration: none;
+	font-family: 'Kite One', sans-serif;
+	font-size: 48pt;
+	letter-spacing: 0.1em;
+}
+
+/*_____LOGIN______*/
+.login{
+	width: 200px;
+	margin-left: 48px;
+}
+.text-box{
+	margin: 4px 0;
+	padding: 2px 4px;
+	width: 164px;
+	letter-spacing: 1px;
+}
+.submit-button{
+	position: relative;
+	left: 122px;
+	margin: 4px 0;
+	padding: 2px 4px;
+	color: #A9A9A9;
+	border: 1px solid #A9A9A9;
+	background-color: white;
+	letter-spacing: 1px;
+}
+.login p{
+	width: 176px;
+	color: #A9A9A9;
+}
+.login a{
+	color: #A9A9A9;
+	letter-spacing: 0.1em;
+}
+.login a:hover{
+	font-style: italic;
+}
+.login .errors {
+	color: #FF016B;
+}
+
+
+/*____LOGGED IN______*/
+.nav {
+	position: relative;
+	top: 24px;
+	left: 0;
+	color: #A9A9A9;
+	letter-spacing: 0.1em;
+}
+.nav ul {
+	list-style-type: none;
+	margin: 0 0 0 48px;
+	padding: 0;
+}
+.nav li {
+	padding: 8px;
+}
+.nav a{
+	text-decoration: none;
+	color: #A9A9A9;
+}
+
+/*_____USER_____*/
+h3 {
+	color: #444;
+	font-weight: 400;
+	letter-spacing: 1px
+}
+.directions {
+	color: #444;
+	padding-top: 20px;
+}
+.directions a{
+	text-decoration: none;
+	color: #19D9FF;
+}
+.directions a:hover{
+	text-decoration: underline	
+}
+.albums-list{
+	list-style-type: none;
+	margin: 0;
+	padding: 8px;
+}
+.albums-list a{
+	text-decoration: none;
+	color: #FF016B;
 }

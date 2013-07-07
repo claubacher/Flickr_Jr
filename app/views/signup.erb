@@ -1,7 +1,7 @@
 <div class="signup container">
   <% if @errors %>
     <% @errors.each do |error| %>
-      <p> <%= error %> </p>
+      <p class="errors"> <%= error %> </p>
     <% end %>
   <% end %>
   <form method="post" action="/signup">
