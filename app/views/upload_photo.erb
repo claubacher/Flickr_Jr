@@ -1,8 +1,9 @@
-<form action="/photos/new" enctype="multipart/form-data">
+<form method="post" action="/photos/new" enctype="multipart/form-data">
   <select name="album">
     <% @albums.each do |album| %>
       <option value="<%= album.name %>"><%= album.name %></option>
     <% end %>
   </select>
-  <input type="file" name="filename">
+  <input type="file" name="file">
+  <input type="submit" value="Upload">
 </form>

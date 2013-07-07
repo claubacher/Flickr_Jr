@@ -7,7 +7,7 @@
     <h3>View Albums by User</h3>
     <ul>
       <% @users.each do |user| %>
-      <li><a href="/users/<%= user.id %>/albums"><%= user.name %></a></li>
+      <li><a href="/users/<%= user.id %>/albums"><%= user.username %></a></li>
       <% end %>
     </ul>
   <% end %>

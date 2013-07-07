@@ -1,5 +1,5 @@
 <div class=""> 
-  <a href="/users/<%= session[:user_id] %>/albums"><%= User.find(session[:user_id]).name %></a>
-  <a href="/photos/new">Upload a photo</a>
+  <a href="/users/<%= @user.id %>/albums"><%= @user.username %></a>
+  <a href="/users/<%= @user.id %>/photos/new">Upload a photo</a>
   <a href="/logout">logout</a>
 </div>

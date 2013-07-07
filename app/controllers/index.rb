@@ -1,13 +1,8 @@
 get '/' do
   @albums = Album.all
   @users = User.all
+  @user = User.find(session[:user_id]) if session[:user_id]
   erb :index
-end
-
-get '/albums/:id' do
-  @album = Album.find(params[:id])
-  @photos = @album.photos
-  erb :album
 end
 
 get '/users/:user_id/albums' do
@@ -16,7 +11,16 @@ get '/users/:user_id/albums' do
   erb :user
 end
 
-get '/photos/:id' do
-  @photo = Photo.find(params[:id])
+get '/users/:user_id/albums/:album_id' do
+  @user = User.find(params[:user_id])
+  @album = Album.find(params[:album_id])
+  @photos = @album.photos
+  erb :album
+end
+
+get '/users/:user_id/albums/:album_id/photos/:photo_id' do
+  @user = User.find(params[:user_id])
+  @album = Album.find(params[:album_id])
+  @photo = Photo.find(params[:photo_id])
   erb :photo
 end

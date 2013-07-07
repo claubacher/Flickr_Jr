@@ -2,7 +2,7 @@ post '/login' do
   if User.authenticate(params[:name], params[:password])
     @user = User.authenticate(params[:name], params[:password])
     session[:user_id] = @user.id
-    redirect '/posts'
+    redirect '/'
   else
     @errors = "Username or password was invalid."
     erb :index

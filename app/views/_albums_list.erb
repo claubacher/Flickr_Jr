@@ -1,5 +1,5 @@
 <ul>
   <% @albums.each do |album| %>
-  <li><a href="/albums/<%= album.id %>"><%= album.name %></a></li>
+  <li><a href="/users/<%= album.user.id %>/albums/<%= album.id %>"><%= album.name %></a></li>
   <% end %>
 </ul>

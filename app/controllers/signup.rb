@@ -3,7 +3,7 @@ get '/signup' do
 end
 
 post '/signup' do
-  @user = User.new(:name => params[:name])
+  @user = User.new(:username => params[:name])
   @user.password = params[:password]
   if @user.valid?
     @user.albums << Album.create(:name => "My First Album")
