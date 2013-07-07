@@ -30,6 +30,10 @@ set :root, APP_ROOT
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
 
+CarrierWave.configure do |config|
+  config.remove_previously_stored_files_after_update = false
+end
+
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }

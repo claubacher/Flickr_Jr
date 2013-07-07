@@ -1,5 +1,5 @@
 get '/' do
-  @albums = Album.all
+  @photos = Photo.order("created_at DESC").limit(10)
   @users = User.all
   @user = User.find(session[:user_id]) if session[:user_id]
   erb :index

@@ -1,14 +1,6 @@
 <div class="container">
-  <% if @albums %>
-    <h3>All Albums</h3>
-    <%= erb :_albums_list %>
-  <% end %>
-  <% if @users %>
-    <h3>View Albums by User</h3>
-    <ul>
-      <% @users.each do |user| %>
-      <li><a href="/users/<%= user.id %>/albums"><%= user.username %></a></li>
-      <% end %>
-    </ul>
-  <% end %>
+  <h3>Recently Uploaded Photos</h3>
+  <%= erb :_photos_list %>
+  <h3>View Albums by User</h3>
+  <%= erb :_users_list %>
 </div>

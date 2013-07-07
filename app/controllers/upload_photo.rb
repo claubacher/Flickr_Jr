@@ -10,9 +10,8 @@ post '/photos/new' do
   @user = User.find(session[:user_id])
 
   @user.file = params[:file]
+  # @user.file = File.open("/uploads/" + @user.file.filename)
   @user.save
-  
-  puts @user.file
 
   filename = "/uploads/" + @user.file.filename
 
