@@ -100,7 +100,7 @@ h3 {
 .albums-list{
 	list-style-type: none;
 	margin: 0;
-	padding: 8px;
+	padding: 8px 16px;
 }
 .albums-list a{
 	text-decoration: none;

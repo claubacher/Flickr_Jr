@@ -6,6 +6,7 @@ post '/login' do
     @errors = "Username or password was invalid."
   end
   @photos = Photo.order("created_at DESC").limit(10)
+  @albums = Album.all
   @users = User.all
   erb :index
 end

@@ -1,6 +1,8 @@
 <div class="nav">
 	<ul>
-  <li>welcome, <a href="/users/<%= @user.id %>/albums"><%= @user.username %></a></li>
+  <li>welcome, <%= @user.username %></li>
+  <li><a href="/users/<%= @user.id %>/albums">view your albums</a></li>
+  <li><a href="/">view all photos</a></li>
   <li><a href="/logout">log out</a></li>
   </ul>
 </div>
