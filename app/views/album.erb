@@ -5,4 +5,5 @@
       <li><a href="/photos/<%= photo.id %>"><img src="<%= photo.filename %>"></a></li>
     <% end %>
   </ul>
+  <a href="/users/<%= @album.user.id %>/albums">Back to Your Albums</a>
 <% end %>

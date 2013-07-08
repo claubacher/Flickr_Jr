@@ -3,7 +3,6 @@
   width: 600px;
   padding: 0px 20px 20px 20px;
 }
-
 /*_____LAYOUT______*/
 header{
 	position:fixed ;
@@ -21,7 +20,6 @@ header h1 a{
 	font-size: 48pt;
 	letter-spacing: 0.1em;
 }
-
 /*_____LOGIN______*/
 .login{
 	width: 200px;
@@ -57,8 +55,6 @@ header h1 a{
 .login .errors {
 	color: #FF016B;
 }
-
-
 /*____LOGGED IN______*/
 .nav {
 	position: relative;
@@ -79,7 +75,6 @@ header h1 a{
 	text-decoration: none;
 	color: #A9A9A9;
 }
-
 /*_____USER_____*/
 h3 {
 	color: #444;
@@ -105,4 +100,8 @@ h3 {
 .albums-list a{
 	text-decoration: none;
 	color: #FF016B;
+}
+/*_____UPLOAD_____*/
+.upload label, input, p{
+	margin: 12px;
 }

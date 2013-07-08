@@ -5,8 +5,6 @@ get '/users/:user_id/photos/new' do
 end
 
 post '/photos/new' do
-  puts params[:file]
-
   @user = User.find(session[:user_id])
 
   @user.file = params[:file]
@@ -20,4 +18,14 @@ post '/photos/new' do
   @album.save
 
   redirect "/users/#{session[:user_id]}/albums"
+end
+
+get '/albums/new' do
+end
+
+post '/albums/new' do
+  @album = Album.create(:name => params[:album])
+  @album.user = User.find(session[:user_id])
+  @album.save
+  redirect "/users/#{session[:user_id]}/photos/new"
 end

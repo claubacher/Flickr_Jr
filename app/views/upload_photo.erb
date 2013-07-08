@@ -1,9 +1,12 @@
-<form method="post" action="/photos/new" enctype="multipart/form-data">
+<h3>Upload a Photo</h3>
+<form class="upload" method="post" action="/photos/new" enctype="multipart/form-data">
+  <input type="file" name="file"><br>
+	<label for="album">Add to album:</label>
   <select name="album">
     <% @albums.each do |album| %>
       <option value="<%= album.name %>"><%= album.name %></option>
     <% end %>
-  </select>
-  <input type="file" name="file">
+  </select><br> 
+  <p>or <a class="create-album" href="/albums/new">create a new album</a></p>
   <input type="submit" value="Upload">
 </form>
