@@ -13,14 +13,12 @@ get '/users/:user_id/albums' do
 end
 
 get '/users/:user_id/albums/:album_id' do
-  @user = User.find(params[:user_id])
   @album = Album.find(params[:album_id])
   @photos = @album.photos
   erb :album
 end
 
 get '/users/:user_id/albums/:album_id/photos/:photo_id' do
-  @user = User.find(params[:user_id])
   @album = Album.find(params[:album_id])
   @photo = Photo.find(params[:photo_id])
   erb :photo

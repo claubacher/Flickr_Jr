@@ -3,8 +3,6 @@ class User < ActiveRecord::Base
 
   has_many :albums
 
-  mount_uploader :file, FileUploader
-
   include BCrypt
 
   def self.authenticate(username, password_input)

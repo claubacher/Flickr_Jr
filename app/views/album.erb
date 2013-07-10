@@ -2,8 +2,8 @@
   <h3><%= @album.name %></h3>
   <ul class="albums-list">
     <% @photos.each do |photo| %>
-      <li><a href="/photos/<%= photo.id %>"><img src="<%= photo.filename %>"></a></li>
+      <li><a href="/photos/<%= photo.id %>"><img src="<%= photo.file %>"></a></li>
     <% end %>
   </ul>
-  <a href="/users/<%= @album.user.id %>/albums">Back to Your Albums</a>
+  <a href="/users/<%= @album.user.id %>/albums">Back to <%= @album.user.username %>'s Albums</a>
 <% end %>

@@ -21,10 +21,10 @@
 <body>
   <header>
     <h1><a href="/">flickar</a></h1>
-    <% if session[:user_id] == nil %>
-      <%= erb :login %>
-    <% else %>
+    <% if current_user %>
       <%= erb :logged_in %>
+    <% else %>
+      <%= erb :login %>
     <% end %>
   </header>
   <div class="container">

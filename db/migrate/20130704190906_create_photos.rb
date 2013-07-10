@@ -1,7 +1,7 @@
 class CreatePhotos < ActiveRecord::Migration
   def change
     create_table :photos do |t|
-      t.string :filename
+      t.string :file
       t.references :album
       t.timestamps
     end

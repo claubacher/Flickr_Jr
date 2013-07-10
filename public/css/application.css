@@ -1,7 +1,14 @@
 .container {
   margin: 20px auto;
   width: 600px;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 20px 260px;
+}
+a{
+	text-decoration: none;
+	color: #19D9FF;
+}
+a:hover{
+	text-decoration: underline;
 }
 /*_____LAYOUT______*/
 header{
@@ -85,23 +92,31 @@ h3 {
 	color: #444;
 	padding-top: 20px;
 }
-.directions a{
-	text-decoration: none;
-	color: #19D9FF;
-}
-.directions a:hover{
-	text-decoration: underline	
-}
 .albums-list{
 	list-style-type: none;
 	margin: 0;
-	padding: 8px 16px;
+	padding: 0 16px 8px 16px;
+}
+.albums-list li{
+	padding-bottom: 8px;
 }
 .albums-list a{
-	text-decoration: none;
 	color: #FF016B;
 }
 /*_____UPLOAD_____*/
 .upload label, input, p{
-	margin: 12px;
+	margin: 12px 12px 24px 12px;
+}
+label#dropdown{
+	margin-right: 0;
+}
+#album-dropdown{
+	margin-right: 2px;
+	margin-left: 2px;
+}
+.upload #submit{
+	margin-top: 24px;
+	color: #19D9FF;
+	background: none;
+	border: 1px solid #19D9FF;
 }
