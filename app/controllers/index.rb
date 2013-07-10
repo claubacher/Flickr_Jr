@@ -23,3 +23,8 @@ get '/users/:user_id/albums/:album_id/photos/:photo_id' do
   @photo = Photo.find(params[:photo_id])
   erb :photo
 end
+
+get '/photos/:photo_id' do
+  @photo = Photo.find(params[:photo_id])
+  erb :photo
+end
